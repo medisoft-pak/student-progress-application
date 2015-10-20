@@ -1,0 +1,58 @@
+<ion-view view-title="Create Users">
+
+  <ion-content>
+
+    <form nmae="myForm" >
+
+    <div class="list">
+
+
+      <label class="item item-input item-icon-right">
+        <i ng-if="!name" class="icon ion-alert-circled"></i>
+        <input type="text" placeholder="User Name" ng-model="name">
+      </label>
+
+      <label class="item item-input">
+        <input type="password" required placeholder="Password" ng-model="pass">
+      </label>
+
+      <label class="item item-input">
+        <input type="password" name="studentname"
+               required placeholder="Re-Type Password"
+               ng-model="rpass">
+      </label>
+      <div role="alert">
+      <span class="error" ng-show="myForm.studentname.$error.required">
+       Required!</span>
+      </div>
+      <div class="list">
+
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Group
+          </div>
+          <select >
+            <option >Administrator</option>
+            <option >Admin School</option>
+            <option >Teacher</option>
+            <option selected>Student</option>
+
+          </select>
+        </label>
+
+
+      </div>
+
+
+
+    </div>
+
+    <button type="submit" class="button button-positive button-full" ng-show="pass == rpass">
+      Save
+    </button>
+    <p class="errormessage" ng-show="pass != rpass">password not matched</p>
+
+</form>
+  </ion-content>
+
+</ion-view>
