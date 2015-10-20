@@ -1,0 +1,61 @@
+<ion-view view-title="School Setup">
+
+  <ion-content>
+
+    <form nmae="myForm" >
+
+      <div class="list">
+
+
+        <label class="item item-input">
+
+          <input type="text" placeholder="School Name" ng-model="name">
+        </label>
+
+
+        <label class="item item-input">
+
+          <input type="text" placeholder="Branch Name" ng-model="name">
+        </label>
+
+
+      <label class="item item-input">
+
+        <input type="text" placeholder="Address" ng-model="name">
+      </label>
+
+
+      <label class="item item-input">
+
+        <input type="text" placeholder="Contact#" ng-model="name">
+      </label>
+
+
+      <label class="item item-input">
+
+        <input type="text" placeholder="Email" ng-model="name">
+      </label>
+       <label class="item item-input">
+
+        <input type="text" placeholder="Website" ng-model="name">
+      </label>
+
+        <div class="item item-avatar">
+          <img src="avatar.jpg">
+          <h2>School Logo</h2>
+
+
+        </div>
+
+        <a class="button button-small button-positive">browse..</a>
+      </div>
+
+      <button type="submit" class="button button-positive button-full" ng-show="pass == rpass">
+        Save
+      </button>
+      <p class="errormessage" ng-show="pass != rpass">password not matched</p>
+
+    </form>
+  </ion-content>
+
+</ion-view>
