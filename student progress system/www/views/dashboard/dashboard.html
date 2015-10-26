@@ -4,29 +4,20 @@
 
     <form nmae="myForm" >
 
-      <div class="row">
 
-        <a href="#/schoolSetup">
-        <div class="col"><button class="button button-positive">School ........Setup</button></div>
-        </a>
-
-        <a href="#/createUser">
-          <div class="col"><button class="button button-positive">Create ........Users</button></div>
-        </a>
-
+      <div class="col">
+        <button class="button button-positive button-full">School ........Setup</button>
       </div>
 
-      <div class="row">
-
-        <a href="#/studentRegistration">
-        <div class="col"><button class="button button-positive">Student Registration</button></div>
-        </a>
-
-
-          <div class="col"><button class="button button-positive">Student Activation</button></div>
-
-
+      <div class="col">
+        <button ui-sref="createUser" class="button button-positive button-full">Create ........Users</button>
       </div>
+
+
+      <button ui-sref="studentRegistration" class="button button-positive  button-full">Student Registration</button>
+
+      <button ui-sref="studentRegistration" class="button button-positive  button-full">Student Activation</button>
+
 
     </form>
   </ion-content>
