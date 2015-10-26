@@ -9,45 +9,47 @@
 
         <label class="item item-input">
 
-          <input type="text" placeholder="School Name" ng-model="name">
+          <input type="text" placeholder="School Name" ng-model="schoolname">
         </label>
 
 
         <label class="item item-input">
 
-          <input type="text" placeholder="Branch Name" ng-model="name">
+          <input type="text" placeholder="Branch Name" ng-model="branchname">
         </label>
 
 
       <label class="item item-input">
 
-        <input type="text" placeholder="Address" ng-model="name">
+        <input type="text" placeholder="Address" ng-model="address">
       </label>
 
 
       <label class="item item-input">
 
-        <input type="text" placeholder="Contact#" ng-model="name">
+        <input type="text" placeholder="Contact#" ng-model="contactno">
       </label>
 
 
       <label class="item item-input">
 
-        <input type="text" placeholder="Email" ng-model="name">
+        <input type="text" placeholder="Email" ng-model="email">
       </label>
        <label class="item item-input">
 
-        <input type="text" placeholder="Website" ng-model="name">
+        <input type="text" placeholder="Website" ng-model="website">
       </label>
 
         <div class="item item-avatar">
-          <img src="avatar.jpg">
+          <img src="{{prev_img}}">
           <h2>School Logo</h2>
 
 
         </div>
-        <button class="button button-positive button-full" ng-click="openfiles()">browse</button>
-
+        <!--<button class="button button-positive button-full" ng-click="openfiles()">browse</button>-->
+        <input ng-model="photo"
+               onchange="angular.element(this).scope().file_changed(this)"
+               type="file" accept="image/*" />
       </div>
 
       <button type="submit" class="button button-positive button-full" ng-show="pass == rpass">

@@ -3,21 +3,21 @@
   <ion-content>
     <div class="list">
       <label class="item item-input">
-        <input type="text" placeholder="Student Id">
+        <input type="text" placeholder="Student Id" ng-model="studentid">
       </label>
       <label class="item item-input">
-        <input type="text" placeholder="GR.No.">
-      </label>
-
-      <label class="item item-input">
-        <input type="text" placeholder="Student`Name">
-      </label>
-      <label class="item item-input">
-        <input type="text" placeholder="Father`Name">
+        <input type="text" placeholder="GR.No." ng-model="grno">
       </label>
 
       <label class="item item-input">
-        <textarea placeholder="Address"></textarea>
+        <input type="text" placeholder="Student`Name" ng-model="studentname">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Father`Name" ng-model="fathername">
+      </label>
+
+      <label class="item item-input">
+        <textarea placeholder="Address" ng-model="address"></textarea>
       </label>
 
       <div class="list">
@@ -51,8 +51,7 @@
 
     </div>
 
-    <button class="button button-positive button-full"> Save
-    </button>
+    <button class="button button-positive button-full" ng-click="savestudent()"> Save </button>
 
   </ion-content>
 
