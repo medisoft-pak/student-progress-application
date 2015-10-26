@@ -48,9 +48,14 @@
         </div>
         <!--<button class="button button-positive button-full" ng-click="openfiles()">browse</button>-->
         <input ng-model="photo"
+               class="button button-positive"
                onchange="angular.element(this).scope().file_changed(this)"
-               type="file" accept="image/*" />
+               type="file"
+               accept="image/*"
+          />
+
       </div>
+
 
       <button type="submit" class="button button-positive button-full" ng-show="pass == rpass">
         Save
