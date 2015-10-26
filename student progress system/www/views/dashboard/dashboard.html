@@ -2,24 +2,28 @@
 
   <ion-content>
 
-    <form nmae="myForm" >
+    <form nmae="myForm" class="list">
 
 
-      <div class="col">
-        <button class="button button-positive button-full">School ........Setup</button>
-      </div>
+      <button ui-sref="schoolSetup"
+              class="item button button-royal button-full">School ........Setup
+      </button>
 
-      <div class="col">
-        <button ui-sref="createUser" class="button button-positive button-full">Create ........Users</button>
-      </div>
+      <button ui-sref="createUser"
+              class="item button button-royal button-full">Create ........Users
+      </button>
 
+      <button ui-sref="studentRegistration"
+              class="item button button-royal  button-full">Student Registration
+      </button>
 
-      <button ui-sref="studentRegistration" class="button button-positive  button-full">Student Registration</button>
-
-      <button ui-sref="studentRegistration" class="button button-positive  button-full">Student Activation</button>
+      <button ui-sref="studentRegistration"
+              class="item button button-royal  button-full">Student Activation
+      </button>
 
 
     </form>
+
   </ion-content>
 
 </ion-view>
