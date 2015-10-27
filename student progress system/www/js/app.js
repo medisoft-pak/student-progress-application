@@ -19,7 +19,7 @@ angular.module('starter', ['ionic','ngCordova','firebase'])
   });
 })
 */
-  .service("myCustomService", function(){
+  /*.service("myCustomService", function(){
     var studentsArray = [];
     var indxid=1;
     this._saveStudentInService = function(studentObj){
@@ -41,7 +41,7 @@ angular.module('starter', ['ionic','ngCordova','firebase'])
       return indxid;
     }
 
-  })
+   })*/
 
   .config(function($stateProvider, $urlRouterProvider) {
 
@@ -58,7 +58,7 @@ angular.module('starter', ['ionic','ngCordova','firebase'])
       .state('studentRegistration', {
         url: '/studentRegistration',
         templateUrl: 'views/studentRegistration/studentRegistration.html',
-        controller : "MainController"
+        controller: "StudentRegistrationController"
       })
 
       .state('createUser', {
@@ -80,7 +80,7 @@ angular.module('starter', ['ionic','ngCordova','firebase'])
         url: '/dashboard',
         templateUrl: 'views/dashboard/dashboard.html'
         //controller : "CtrlChngeValue"
-      })
+      });
     $urlRouterProvider.otherwise("/dashboard");
 
   })

@@ -1,28 +1,18 @@
 /**
  * Created by kamran on 10/20/2015.
  */
-/*angular.module('starter')
+angular.module('starter')
 
 /// Scound Control
-  .controller('CtrlplaybackScound', function($scope) {
-    ion.sound({
-      sounds: [
-        {
-          name: "tic-tac-toe-theme",
-          loop: true
-        }
+  .controller('StudentRegistrationController', function ($scope, dataService) {
 
-      ],
 
-      path: "./sounds/",
-      preload: true,
-      multiplay: true,
-      volume: 1
-    });
-    ion.sound.play("tic-tac-toe-theme");
-    $scope.playbacksound2 = function () {
-      ion.sound.play("tic-tac-toe-theme");
+    $scope.newStudent = {};
+
+    $scope.addNewStudent = function (newStudent) {
+      dataService.addNewStudent(newStudent);
+
     }
+  });
 
 
-  })*/

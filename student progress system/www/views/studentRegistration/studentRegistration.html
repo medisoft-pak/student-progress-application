@@ -3,21 +3,21 @@
   <ion-content>
     <div class="list">
       <label class="item item-input">
-        <input type="text" placeholder="Student Id" ng-model="studentid">
+        <input type="text" placeholder="Student Id" ng-model="newStudent.studentid">
       </label>
       <label class="item item-input">
-        <input type="text" placeholder="GR.No." ng-model="grno">
-      </label>
-
-      <label class="item item-input">
-        <input type="text" placeholder="Student`Name" ng-model="studentname">
-      </label>
-      <label class="item item-input">
-        <input type="text" placeholder="Father`Name" ng-model="fathername">
+        <input type="text" placeholder="GR.No." ng-model="newStudent.grno">
       </label>
 
       <label class="item item-input">
-        <textarea placeholder="Address" ng-model="address"></textarea>
+        <input type="text" placeholder="Student`Name" ng-model="newStudent.studentname">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Father`Name" ng-model="newStudent.fathername">
+      </label>
+
+      <label class="item item-input">
+        <textarea placeholder="Address" ng-model="newStudent.address"></textarea>
       </label>
 
       <div class="list">
@@ -26,7 +26,7 @@
           <div class="input-label">
             Class
           </div>
-          <select>
+          <select ng-model="newStudent.class">
             <option selected>I</option>
 
           </select>
@@ -36,7 +36,7 @@
           <div class="input-label">
             Section
           </div>
-          <select>
+          <select ng-model="newStudent.section">
             <option selected>A</option>
             <option >B</option>
             <option>C</option>
@@ -51,7 +51,7 @@
 
     </div>
 
-    <button class="button button-positive button-full" ng-click="savestudent()"> Save </button>
+    <button class="button button-positive button-full" ng-click="addNewStudent(newStudent)"> Save</button>
 
   </ion-content>
 
