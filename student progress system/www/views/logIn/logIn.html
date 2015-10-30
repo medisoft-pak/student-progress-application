@@ -1,23 +1,24 @@
-<ion-view view-title="Sign In">
+<ion-view view-title="Login">
 
   <ion-content>
 
     <form onsubmit="alert();">
 
       <div class="list">
-        <label class="item item-input">
-          <input required aria-required="true" type="text" placeholder="Username">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Username</span>
+          <input required type="text" placeholder="Username">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Password</span>
+          <input required type="text" placeholder="Password">
         </label>
 
-        <label class="item item-input">
-          <input required type="password"  placeholder="Password">
-        </label>
+        <button type="submit" class="button button-positive button-full">
+          Log In
+        </button>
+
       </div>
-
-      <button type="submit" class="button button-positive button-full">
-        Log In
-      </button>
-
 
     </form>
   </ion-content>
