@@ -4,14 +4,13 @@
 
     <form onsubmit="alert();">
 
-    <div class="list">
+      <div class="list">
         <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="username">
+          <input required aria-required="true" type="text" placeholder="Username">
         </label>
+
         <label class="item item-input">
-          <span class="input-label">Password</span>
-          <input type="password" ng-model="pwd">
+          <input required type="password"  placeholder="Password">
         </label>
       </div>
 

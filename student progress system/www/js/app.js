@@ -73,15 +73,15 @@ angular.module('starter', ['ionic','ngCordova','firebase'])
       })
       .state('logIn', {
         url: '/logIn',
-        templateUrl: 'views/logIn/logIn.html'
-        //controller : "CtrlChngeValue"
+        templateUrl: 'views/logIn/logIn.html',
+        controller : "logInController"
       })
       .state('dashboard', {
         url: '/dashboard',
         templateUrl: 'views/dashboard/dashboard.html'
         //controller : "CtrlChngeValue"
       });
-    $urlRouterProvider.otherwise("/dashboard");
+    $urlRouterProvider.otherwise("/logIn");
 
   })
   .controller('MainController', function($scope,$firebaseObject) {
