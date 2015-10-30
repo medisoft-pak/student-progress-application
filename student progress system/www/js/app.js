@@ -63,13 +63,13 @@ angular.module('starter', ['ionic','ngCordova','firebase'])
 
       .state('createUser', {
         url: '/createUser',
-        templateUrl: 'views/createUser/createUser.html'
-        //controller : "CtrlChngeValue"
+        templateUrl: 'views/createUser/createUser.html',
+        controller: "createUserController"
       })
       .state('schoolSetup', {
         url: '/schoolSetup',
         templateUrl: 'views/schoolSetup/schoolSetup.html',
-        controller : "FileOpenerController"
+        controller: "schoolSetupController"
       })
       .state('logIn', {
         url: '/logIn',

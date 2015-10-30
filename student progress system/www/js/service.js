@@ -3,50 +3,31 @@
  */
 angular.module('starter')
 
-  .service("dataService", function ($firebaseArray) {
+  .service("dataService", function ($firebaseArray, $firebaseObject) {
 
 
-    var ref = new Firebase("https://student-progress.firebaseio.com/studentRegestration");
-
+    var ref = new Firebase("https://student-progress.firebaseio.com");
 
     //alanRef = ref.child("users").child("alanisawesome");
+    //this.schoolName="my school";
+
+
+    this.addNewSchool = function (newSchool) {
+
+      var schoolNode = $firebaseArray(ref.child(newSchool.schoolName));
+
+      schoolNode.$add(newSchool);
+    };
+
 
     this.addNewStudent = function (newStudent) {
+      var studentNode = $firebaseArray(ref.child(this.schoolName + "/studentRegestration/" + newStudent.studentid));
+      studentNode.$add(newStudent);
+    };
 
-      var data = $firebaseArray(ref.child(newStudent.studentid));
-
-      data.$add(newStudent);
-
-
-      // var usersRef = ref.child("StudentRegistration")
-
-      /*  var obj=
-
-       {
-       studentid: $scope.studentid,
-       grno: $scope.grno,
-       studentname: $scope.studentname,
-       fathername: $scope.fathername,
-       address: $scope.address
-
-       };*/
-
-      /*  var newusersRef =ref.push({
-
-       "studentid": $scope.studentid,
-       "grno": $scope.grno,
-       "studentname": $scope.studentname,
-       "fathername": $scope.fathername,
-       "address": $scope.address
-
-       });*/
-      // newusersRef.set(obj);
-
-      /* if(newusersRef) {
-       alert('saved successfully');
-       } else {
-       alert('something went wrong');
-       }*/
-    }
+    this.addNewUsers = function (newUser) {
+      var userNode = $firebaseArray(ref.child(newUser.schoolName + "/users/" + newUser.group + "/" + newUser.username));
+      userNode.$add(newUser);
+    };
 
   });
