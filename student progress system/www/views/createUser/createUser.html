@@ -2,18 +2,18 @@
 
   <ion-content>
 
-    <form nmae="myForm" >
+    <form ng-submit="addNewUser(newUser)">
 
     <div class="list">
 
 
       <label class="item item-input item-icon-right">
         <i ng-if="!name" class="icon ion-alert-circled"></i>
-        <input type="text" placeholder="User Name" ng-model="name">
+        <input type="text" placeholder="User Name" ng-model="newUser.username">
       </label>
 
       <label class="item item-input">
-        <input type="password" required placeholder="Password" ng-model="pass">
+        <input type="password" required placeholder="Password" ng-model="newUser.password">
       </label>
 
       <label class="item item-input">
@@ -21,17 +21,19 @@
                required placeholder="Re-Type Password"
                ng-model="rpass">
       </label>
-      <div role="alert">
-      <span class="error" ng-show="myForm.studentname.$error.required">
-       Required!</span>
-      </div>
-      <div class="list">
+      <!--
+            <div role="alert">
+            <span class="error" ng-show="myForm.studentname.$error.required">
+             Required!</span>
+            </div>
+      -->
+
 
         <label class="item item-input item-select">
           <div class="input-label">
             Group
           </div>
-          <select >
+          <select ng-model="newUser.group">
             <option >Administrator</option>
             <option >Admin School</option>
             <option >Teacher</option>
@@ -40,19 +42,42 @@
           </select>
         </label>
 
+      <label class="item item-input item-select">
+        <div class="input-label">
+          School Name
+        </div>
+        <select ng-model="newUser.schoolName">
 
-      </div>
+          <option> school 1</option>
+          <option> school 2</option>
+          <option> school 3</option>
+          <option selected> school 4</option>
 
+        </select>
+      </label>
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Branch
+        </div>
+        <select ng-model="newUser.branch">
+
+          <option> block 1 branch</option>
+          <option> block 2 branch</option>
+          <option> block 3 branch</option>
+          <option selected> block 4 branch</option>
+
+        </select>
+      </label>
+
+      <button type="submit" value="submit" class="item button button-positive button-full">
+        Save
+      </button>
 
 
     </div>
-
-    <button type="submit" class="button button-positive button-full" ng-show="pass == rpass">
-      Save
-    </button>
-    <p class="errormessage" ng-show="pass != rpass">password not matched</p>
-
 </form>
+
   </ion-content>
 
 </ion-view>

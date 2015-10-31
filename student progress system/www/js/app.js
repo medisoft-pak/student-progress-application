@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic','ngCordova'])
+angular.module('starter', ['ionic','ngCordova','firebase'])
 
 /*
 .run(function($ionicPlatform) {
@@ -19,6 +19,29 @@ angular.module('starter', ['ionic','ngCordova'])
   });
 })
 */
+  /*.service("myCustomService", function(){
+    var studentsArray = [];
+    var indxid=1;
+    this._saveStudentInService = function(studentObj){
+      //console.log(studentObj);
+      studentsArray.push(studentObj);
+      console.log(studentsArray);
+    };
+
+    this.getAllStudents = function(){
+      return studentsArray;
+    }
+
+
+    this.setId = function(parmid){
+      indxid=parmid;
+    }
+
+    this.getId = function(){
+      return indxid;
+    }
+
+   })*/
 
   .config(function($stateProvider, $urlRouterProvider) {
 
@@ -34,19 +57,19 @@ angular.module('starter', ['ionic','ngCordova'])
 
       .state('studentRegistration', {
         url: '/studentRegistration',
-        templateUrl: 'views/studentRegistration/studentRegistration.html'
-        //controller : "CtrlChngeValue"
+        templateUrl: 'views/studentRegistration/studentRegistration.html',
+        controller: "StudentRegistrationController"
       })
 
       .state('createUser', {
         url: '/createUser',
-        templateUrl: 'views/createUser/createUser.html'
-        //controller : "CtrlChngeValue"
+        templateUrl: 'views/createUser/createUser.html',
+        controller: "createUserController"
       })
       .state('schoolSetup', {
         url: '/schoolSetup',
         templateUrl: 'views/schoolSetup/schoolSetup.html',
-        controller : "FileOpenerController"
+        controller: "schoolSetupController"
       })
       .state('logIn', {
         url: '/logIn',
@@ -57,18 +80,79 @@ angular.module('starter', ['ionic','ngCordova'])
         url: '/dashboard',
         templateUrl: 'views/dashboard/dashboard.html'
         //controller : "CtrlChngeValue"
-      })
+      });
     $urlRouterProvider.otherwise("/dashboard");
 
+  })
+  .controller('MainController', function($scope,$firebaseObject) {
+
+
+   var ref = new Firebase("https://boiling-inferno-2413.firebaseio.com/studentsprogress");
+
+     alanRef = ref.child("users").child("alanisawesome");
+
+    var alan={
+
+      id: "345" ,
+      name:"kamran2424"
+
+    };
+
+    $scope.savestudent = function() {
+
+
+
+      alanRef.set(alan);
+
+     // var usersRef = ref.child("StudentRegistration")
+
+  /*  var obj=
+
+    {
+      studentid: $scope.studentid,
+      grno: $scope.grno,
+      studentname: $scope.studentname,
+      fathername: $scope.fathername,
+      address: $scope.address
+
+      };*/
+
+    /*  var newusersRef =ref.push({
+
+        "studentid": $scope.studentid,
+        "grno": $scope.grno,
+        "studentname": $scope.studentname,
+        "fathername": $scope.fathername,
+        "address": $scope.address
+
+      });*/
+     // newusersRef.set(obj);
+
+     /* if(newusersRef) {
+        alert('saved successfully');
+      } else {
+        alert('something went wrong');
+      }*/
+  }
   })
 
 .controller('FileOpenerController', function($scope, $cordovaFileOpener2, $ionicPlatform) {
 
+    $scope.file_changed = function(element) {
 
-  $scope.openfiles = function () {
+      var photofile = element.files[0];
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        $scope.$apply(function() {
+          $scope.prev_img = e.target.result;
+        });
+      };
+      reader.readAsDataURL(photofile);
+    };
+  /*$scope.openfiles = function () {
     $cordovaFileOpener2.open(
-    /*  '/sdcard/Download/starwars.pdf',
-      'application/pdf'*/
+    /!*  '/sdcard/Download/starwars.pdf',
+      'application/pdf'*!/
        '/Phone storage/Download/Index.pdf',
        'application/pdf'
 
@@ -80,5 +164,5 @@ angular.module('starter', ['ionic','ngCordova'])
         //console.log('Error status: ' + err.status + ' - Error message: ' + err.message);
         console.log('An error occurred: ' + JSON.stringify(err));
       });
-  }
+  }*/
 });
