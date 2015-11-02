@@ -8,7 +8,11 @@ angular.module('starter')
 
     $scope.newUser = {};
 
+    $scope.newUser.isActive = true;
+
     $scope.addNewUser = function (newUser) {
+
+
       dataService.addNewUsers(newUser);
     };
   });

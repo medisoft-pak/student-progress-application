@@ -7,5 +7,9 @@ angular.module('starter')
 
     $scope.loginData = {};
 
+    $scope.doLogin = function(loginData){
+      dataService.doLogin(loginData);
+    }
+
 
   });

@@ -2,16 +2,16 @@
 
   <ion-content>
 
-    <form onsubmit="alert();">
+    <form ng-submit="doLogin(loginData)">
 
       <div class="list">
         <label class="item item-input item-floating-label">
           <span class="input-label">Username</span>
-          <input required type="text" placeholder="Username">
+          <input required type="text" placeholder="Username" ng-model="loginData.username">
         </label>
         <label class="item item-input item-floating-label">
           <span class="input-label">Password</span>
-          <input required type="text" placeholder="Password">
+          <input required type="text" placeholder="Password" ng-model="loginData.password">
         </label>
 
         <button type="submit" class="button button-positive button-full">

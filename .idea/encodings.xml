@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/student progress system/www/css/style.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/student progress system/www/js/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/student progress system/www/js/service.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/student progress system/www/views/createUser/createUser.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/student progress system/www/views/createUser/createUser.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/student progress system/www/views/dashboard/dashboard.html" charset="UTF-8" />
