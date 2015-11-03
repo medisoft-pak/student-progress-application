@@ -2,7 +2,7 @@
 
   <ion-content>
 
-    <form ng-submit="doLogin(loginData)">
+    <form ng-submit="doLogin()">
 
       <div class="list">
         <label class="item item-input item-floating-label">
@@ -21,6 +21,11 @@
       </div>
 
     </form>
+
+
+    <ul>
+      <li ng-repeat="items in userNode">{{items | json}}</li>
+    </ul>
   </ion-content>
 
 </ion-view>
