@@ -42,7 +42,7 @@
           </select>
         </label>
 
-      <label class="item item-input item-select">
+      <label class="item item-input item-select" ng-hide="newUser.group == 'Administrator'">
         <div class="input-label">
           School Name
         </div>
@@ -56,7 +56,7 @@
         </select>
       </label>
 
-      <label class="item item-input item-select">
+      <label class="item item-input item-select" ng-hide="newUser.group == 'Administrator'">
         <div class="input-label">
           Branch
         </div>
