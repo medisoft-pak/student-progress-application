@@ -11,7 +11,7 @@
         </label>
         <label class="item item-input item-floating-label">
           <span class="input-label">Password</span>
-          <input required type="text" placeholder="Password" ng-model="loginData.password">
+          <input required type="text" placeholder="Password" ng-model="loginData.pwd">
         </label>
 
         <button type="submit" class="button button-positive button-full">
@@ -24,8 +24,9 @@
 
 
     <ul>
-      <li ng-repeat="items in userNode">{{items | json}}</li>
+      <li ng-repeat="items in userNode">{{items}}</li>
     </ul>
+
   </ion-content>
 
 </ion-view>

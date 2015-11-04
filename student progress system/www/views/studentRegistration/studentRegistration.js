@@ -13,6 +13,16 @@ angular.module('starter')
       dataService.addNewStudent(newStudent);
 
     }
+
+    $scope.getStudentId = function () {
+
+      $scope.newStudent.studentid = dataService.getStudentId();
+
+      console.log("Recived:", $scope.newStudent.studentId);
+
+
+    }
+
   });
 
 

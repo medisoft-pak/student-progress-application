@@ -48,11 +48,38 @@
       </div>
 
 
+      <label class="item item-input item-select" ng-hide="newUser.group == 'Administrator'">
+        <div class="input-label">
+          School Name
+        </div>
+        <select ng-model="newUser.schoolName">
+
+          <option> school 1</option>
+          <option> school 2</option>
+          <option> school 3</option>
+          <option selected> school 4</option>
+
+        </select>
+      </label>
+
+      <label class="item item-input item-select" ng-hide="newUser.group == 'Administrator'">
+        <div class="input-label">
+          Branch
+        </div>
+        <select ng-model="newUser.branch">
+
+          <option> block 1 branch</option>
+          <option> block 2 branch</option>
+          <option> block 3 branch</option>
+          <option selected> block 4 branch</option>
+
+        </select>
+      </label>
 
     </div>
 
     <button class="button button-positive button-full" ng-click="addNewStudent(newStudent)"> Save</button>
-
+    <button class="button button-positive button-full" ng-click="getStudentId()"> Get Student Id</button>
   </ion-content>
 
 </ion-view>

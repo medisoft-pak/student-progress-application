@@ -76,6 +76,29 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
         templateUrl: 'views/logIn/logIn.html',
         controller : "logInController"
       })
+
+      .state('usersActivation', {
+        url: '/usersActivation',
+        templateUrl: 'views/usersActivation/usersActivation.html'
+        //controller : "logInController"
+      })
+
+      .state('classPromotion', {
+        url: '/classPromotion',
+        templateUrl: 'views/classPromotion/classPromotion.html'
+        //controller : "logInController"
+      })
+
+      .state('viewStudentProgress', {
+        url: '/viewStudentProgress',
+        templateUrl: 'views/viewStudentProgress/viewStudentProgress.html'
+        //controller : "logInController"
+      })
+      .state('DashboardSchool', {
+        url: '/DashboardSchool',
+        templateUrl: 'views/DashboardSchool/DashboardSchool.html'
+        //controller : "logInController"
+      })
       .state('dashboard', {
         url: '/dashboard',
         templateUrl: 'views/dashboard/dashboard.html'

@@ -8,11 +8,15 @@ angular.module('starter')
 
     var ref = new Firebase("https://student-progress.firebaseio.com");
 
-    this.addNewUsers = function (newUser) {
+    /*this.addNewUsers = function (newUser) {
       var userNode = $firebaseArray(ref.child("users/" + newUser.username));
       userNode.$add(newUser);
+     return userNode;
+     };*/
+    this.addNewUsers = function (newUser) {
+      var userNode = ref.child("users").child(newUser.username).set(newUser);
+      console.log("save");
     };
-
 
     /* var messagesRef = new Firebase("https://student-progress.firebaseio.com/users");
      // var messagesRef = new Firebase("https://student-progress.firebaseio.com/users/user 1");
@@ -45,11 +49,41 @@ angular.module('starter')
 */
 
 
+    // var ref = new Firebase("https://student-progress.firebaseio.com/StudenInformation");
+    /*ref.once("value", function(snapshot) {
+     var a = snapshot.numChildren();
+     // a === 1 ("name")
+
+     var b = snapshot.child("name").numChildren();
+     // b === 2 ("first", "last")
+
+     var c = snapshot.child("name/first").numChildren();
+     // c === 0 (since "Fred" is a string)
+     });*/
+    this.getStudentId = function () {
+      var totstu = 0;
+      ref.once("value", function (snapshot) {
+
+        totstu = snapshot.child("StudenInformation").numChildren();
+        console.log("TotalStudent :", totstu);
+
+      });
+
+
+      return totstu + 1;
+
+    };
+
+
     this.addNewSchool = function (newSchool) {
 
-      var schoolNode = $firebaseArray(ref.child(newSchool.schoolName));
+      /* var schoolNode = $firebaseArray(ref.child(newSchool.schoolName));
 
-      schoolNode.$add(newSchool);
+       schoolNode.$add(newSchool);*/
+
+      var userNode = ref.child("schools").child(newSchool.schoolName).child(newSchool.branchname).set(newSchool);
+      console.log("save");
+
     };
 
 
