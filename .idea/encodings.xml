@@ -4,6 +4,8 @@
     <file url="file://$PROJECT_DIR$/student progress system/www/css/style.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/student progress system/www/js/app.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/student progress system/www/js/service.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/student progress system/www/views/classPromotion/classPromotion.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/student progress system/www/views/classPromotion/classPromotion.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/student progress system/www/views/createUser/createUser.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/student progress system/www/views/createUser/createUser.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/student progress system/www/views/dashboard/dashboard.html" charset="UTF-8" />
@@ -15,5 +17,9 @@
     <file url="file://$PROJECT_DIR$/student progress system/www/views/schoolSetup/schoolSetup.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/student progress system/www/views/studentRegistration/studentRegistration.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/student progress system/www/views/studentRegistration/studentRegistration.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/student progress system/www/views/usersActivation/usersActivation.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/student progress system/www/views/usersActivation/usersActivation.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/student progress system/www/views/viewStudentProgress/viewStudentProgress.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/student progress system/www/views/viewStudentProgress/viewStudentProgress.js" charset="UTF-8" />
   </component>
 </project>
